@@ -24,7 +24,7 @@ class RomanToArabicNumbersTest extends Specification {
         6     | "VI"
         7     | "VII"
         8     | "VIII"
-        9     | "IV"
+        9     | "IX"
         10    | "X"
         50    | "L"
         100   | "C"
