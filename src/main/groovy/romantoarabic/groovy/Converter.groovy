@@ -6,7 +6,4 @@ package romantoarabic.groovy
  * Time: 10:41
  */
 class Converter {
-    def convertArabic(int arab) {
-
-    }
 }
