@@ -1,8 +1,8 @@
 import junit.framework.TestCase;
 //Choose between, java, scala, groovy
 //import tennis.java.TennisGame;
-import tennis.scala.TennisGame;
-//import tennis.groovy.TennisGame;
+//import tennis.scala.TennisGame;
+import tennis.groovy.TennisGame;
 
 /*
 Based on https://raw.githubusercontent.com/follesoe/TennisKataJava/master/src/TennisGameTest.java
