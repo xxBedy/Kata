@@ -32,4 +32,5 @@ dependencies {
     testCompile 'org.scalatest:scalatest_2.11:2.2.0'
     testRuntime 'org.scala-lang.modules:scala-xml_2.11:1.0.2'
     compile 'org.codehaus.groovy:groovy-all:2.3.3'
+    testCompile 'org.spockframework:spock-core:0.7-groovy-2.0'
 }
