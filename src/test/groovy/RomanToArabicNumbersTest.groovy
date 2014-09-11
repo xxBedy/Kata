@@ -13,7 +13,7 @@ class RomanToArabicNumbersTest extends Specification {
         setup:
         def converter = new Converter()
         expect:
-        arabic == converter.convertToArabic(roman)
+        converter.convertToArabic(roman) == arabic
         where:
         arabic | roman
         1      | "I"
