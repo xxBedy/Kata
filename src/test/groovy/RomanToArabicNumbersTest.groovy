@@ -36,6 +36,7 @@ class RomanToArabicNumbersTest extends Specification {
         765    | "DCCLXV"
         111    | "CXI"
         222    | "CCXXII"
+        45     | "VL"
     }
 
     @Unroll
