@@ -1,7 +1,7 @@
 import junit.framework.TestCase;
 //Choose between, java, scala, groovy
 //import tennis.java.TennisGame;
-import tennis.scala.TennisGame;
+//import tennis.scala.TennisGame;
 //import tennis.groovy.TennisGame;
 
 /*
@@ -12,24 +12,22 @@ Based on
 
 public class TennisGameTest extends TestCase {
 
-    TennisGame game = new TennisGame("Boris Becker" , "Bjorn Borg");
+    TennisGame game = new TennisGame("Boris Becker", "Bjorn Borg");
 
-    public void testNewGameShouldReturnLoveAll()
-    {
+    public void testNewGameShouldReturnLoveAll() {
         String score = game.getScore();
 
         assertEquals("Love all", score);
     }
 
-    public void testPlayerOneWinsFirstBall()
-    {
+    public void testPlayerOneWinsFirstBall() {
         game.playerOneScores();
 
         String score = game.getScore();
         assertEquals("Fifteen,Love", score);
     }
 
-    public void testFifteenAll(){
+    public void testFifteenAll() {
         game.playerOneScores();
         game.playerTwoScores();
 
@@ -45,7 +43,7 @@ public class TennisGameTest extends TestCase {
     }
 
 
-    public void testPlayerOneWinsFirstThreeBalls(){
+    public void testPlayerOneWinsFirstThreeBalls() {
         createScore(3, 0);
         String score = game.getScore();
         assertEquals("Forty,Love", score);
@@ -58,16 +56,22 @@ public class TennisGameTest extends TestCase {
         assertEquals("Deuce", score);
     }
 
-    public void testPlayerOneWinsGame()
-    {
+    public void testPlayerOneWinsGame() {
         createScore(4, 0);
 
         String score = game.getScore();
         assertEquals("Boris Becker wins", score);
     }
 
-    public void testPlayerTwoWinsGame(){
-        createScore(1,4);
+    public void testPlayerTwoWinsWithLoveGame() {
+        createScore(0, 4);
+
+        String score = game.getScore();
+        assertEquals("Bjorn Borg wins", score);
+    }
+
+    public void testPlayerTwoWinsGame() {
+        createScore(1, 4);
 
         String score = game.getScore();
         assertEquals("Bjorn Borg wins", score);
@@ -79,21 +83,21 @@ public class TennisGameTest extends TestCase {
         assertEquals("Deuce", score);
     }
 
-    public void testPlayerTwoAdvantage(){
+    public void testPlayerTwoAdvantage() {
         createScore(4, 5);
 
         String score = game.getScore();
         assertEquals("Advantage Bjorn Borg", score);
     }
 
-    public void testPlayerOneAdvantage(){
+    public void testPlayerOneAdvantage() {
         createScore(5, 4);
 
         String score = game.getScore();
         assertEquals("Advantage Boris Becker", score);
     }
 
-    public void testPlayerTwoWins(){
+    public void testPlayerTwoWins() {
         createScore(2, 4);
         String score = game.getScore();
         assertEquals("Bjorn Borg wins", score);
@@ -107,14 +111,13 @@ public class TennisGameTest extends TestCase {
     }
 
 
-
     public void testPlayerOneWinsAfterAdvantage() {
         createScore(8, 6);
         String score = game.getScore();
         assertEquals("Boris Becker wins", score);
     }
 
-    private void createScore(int playerOneBalls, int playerTwoBalls ) {
+    private void createScore(int playerOneBalls, int playerTwoBalls) {
         for (int i = 0; i < playerOneBalls; i++) {
             game.playerOneScores();
         }
