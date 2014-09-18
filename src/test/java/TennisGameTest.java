@@ -4,9 +4,12 @@ import tennis.groovy.TennisGame;
 //Choose between, java, scala, groovy
 //import tennis.java.TennisGame;
 //import tennis.scala.TennisGame;
+//import tennis.groovy.TennisGame;
 
 /*
-Based on https://raw.githubusercontent.com/follesoe/TennisKataJava/master/src/TennisGameTest.java
+Based on 
+  https://raw.githubusercontent.com/follesoe/TennisKataJava/master/src/TennisGameTest.java
+  http://web.archive.org/web/20131222161827/http://codingdojo.org/cgi-bin/wiki.pl?KataTennis
 */
 
 public class TennisGameTest extends TestCase {
